@@ -93,6 +93,19 @@
                                             <div class="form-body">
                                                 <div class="row">
                                                     <div class="col-md-4">
+                                                        <label>NIM :</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                                <input type="number" class="form-control" name="nim" placeholder="NIM" id="first-name-icon">
+                                                                <div class="form-control-icon">
+                                                                    <i class="bi bi-person"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
                                                         <label>Nama :</label>
                                                     </div>
                                                     <div class="col-md-8">

@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['lanjot'])) {
+    $nim = $_POST["nim"];
     $nama = $_POST["nama"];
     $email = $_POST["email"];
     $tempat_lahir = $_POST["tempat_lahir"];
@@ -121,6 +122,16 @@ if (isset($_POST['lanjot'])) {
                                                                 <img src="images2/<?php print_r ($foto) ?>" style="width: 100px; height:auto"></img>
 
                                                                 </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label>NIM :</label>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="form-group has-icon-left">
+                                                            <div class="position-relative">
+                                                                <p><?php echo $_POST['nim'] ?></p>
                                                             </div>
                                                         </div>
                                                     </div>

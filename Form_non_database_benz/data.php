@@ -1,6 +1,7 @@
 <?php
 
 if (isset($_POST['lanjot'])) {
+    $nim = $_POST["nim"];
     $nama = $_POST["nama"];
     $email = $_POST["email"];
     $tempat_lahir = $_POST["tempat_lahir"];
@@ -16,6 +17,7 @@ if (isset($_POST['lanjot'])) {
 
     //simpan
     $data = fopen("data_table.dat", "a");
+    fputs($data, $nim . "\n");
     fputs($data, $nama . "\n");
     fputs($data, $email . "\n");
     fputs($data, $tempat_lahir . "\n");
@@ -112,6 +114,7 @@ if (isset($_POST['lanjot'])) {
                     <thead class="container-fluid">
                         <tr>
                             <th class="text-center">No</th>
+                            <th class="text-center">NIM</th>
                             <th class="text-center">Foto</th>
                             <th class="text-center">Nama</th>
                             <th class="text-center">Email</th>
@@ -129,6 +132,7 @@ if (isset($_POST['lanjot'])) {
                         $i = 1;
                         $data = fopen("data_table.dat", "r");
                         while (!feof($data)) {
+                            $nim = fgets($data, 255);
                             $nama = fgets($data, 255);
                             $email = trim(fgets($data, 255));
                             $tempat_lahir = trim(fgets($data, 255));
@@ -148,6 +152,7 @@ if (isset($_POST['lanjot'])) {
 
                             <tr>
                                 <td class="text-center"><?php echo $i++; ?></td>
+                                <td class="text-center"><?php echo $nim; ?></td>
                                 <td class="text-center"> <img src="images/<?php print_r($foto) ?>" style="width: 100px; height:auto"></img></td>
                                 <td class="text-center"><?php echo ($nama) ?></td>
                                 <td class="text-center"><?php echo ($email) ?></td>
